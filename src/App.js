@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import UserForm from './components/UserForm';
 import UsersList from './components/UsersList';
+import Login from './components/Login'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className='flex items-center justify-center h-full'>
         <BrowserRouter>
         <Routes>
+          <Route path='/' element= {<Login/>} />
           <Route path="/show-users" element={<UsersList/>} />
           <Route path="/create-user" element={<UserForm/>} />
           <Route path="/edit-user/:id" element={<UserForm/>} />

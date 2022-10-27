@@ -14,7 +14,7 @@ function UsersList() {
         <div className='w-4/6'>
             <header className='flex justify-between items-center py-4'>
                 <h1>Usuarios: {users.length}</h1>
-                <Link to="/create-user" className='bg-indigo-600 px-2 py-1 rounded-sm text-sm'>
+                <Link to="/create-user" className='bg-emerald-600 px-2 py-1 rounded-md text-sm'>
                     Crear Usuario
                 </Link>
             </header>
@@ -25,8 +25,8 @@ function UsersList() {
                     <header className='flex justify-between'>
                         <h3>{user.id}</h3>
                         <div className='flex gap-x-2'>
-                            <Link to={`/edit-user/${user.id}`} className="bg-yellow-600 px-2 py-1 text-xs rounded-md self-center">Editar</Link>
-                            <button onClick={() => handleDelete(user.id) } className="bg-red-500 px-2 py-1 text-xs rounded-md self-center" >Eliminar</button>
+                            <Link to={`/edit-user/${user.id}`} className="bg-teal-600 px-2 py-1 text-xs rounded-md self-center">Editar</Link>
+                            <button onClick={() => handleDelete(user.id) } className="bg-red-700 px-2 py-1 text-xs rounded-md self-center" >Eliminar</button>
                             
                         </div>
                     </header>

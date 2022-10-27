@@ -41,14 +41,14 @@ function UserForm() {
         navigate('/show-users');
     }
 
-    useEffect(()=>{
+    useEffect(()=>{ 
         if (params.id){
             setUser(users.find(user => user.id === params.id))
         }
     },[params.id, users])
 
   return(
-    <form onSubmit={handleSubmit} className="bg-zinc-800 max-2-sm p-4 mb-2">
+    <form onSubmit={handleSubmit} className="bg-zinc-800 max-2-sm p-4 mb-2 rounded-md">
         <label htmlFor="name" className="block text-sm font-bold mb-2">Nombre:</label>
         <input name='name' type="text" placeholder="Nombre" onChange={handleChange} value={user.title} className="w-full p-2 rounded-md bg-zinc-600 mb-2"/>
 
@@ -66,7 +66,7 @@ function UserForm() {
 
         <label htmlFor="name" className="block text-xs font-bold mb-2">Permisos de Administrador:</label>
         <input name='isAdmin' type="text" placeholder="Permisos" onChange={handleChange} value={user.title} className="w-full p-2 rounded-md bg-zinc-600 mb-2"  />
-        <button className="bg-indigo-600 px-2 py-1">Guardar</button>
+        <button className="bg-emerald-600 px-2 py-1 rounded-md">Guardar</button>
     </form>
   )
 }
